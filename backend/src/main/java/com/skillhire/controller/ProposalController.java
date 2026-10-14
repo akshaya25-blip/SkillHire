@@ -7,7 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/proposals")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class ProposalController {
     private final ProposalRepository repository;
     public ProposalController(ProposalRepository repository) { this.repository = repository; }

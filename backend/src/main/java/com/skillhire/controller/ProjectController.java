@@ -7,7 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/projects")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class ProjectController {
     private final ProjectRepository repository;
     public ProjectController(ProjectRepository repository) { this.repository = repository; }

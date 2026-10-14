@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { BriefcaseBusiness, Search, Plus, Send, Users, Sparkles, Code2, PenTool, Megaphone } from 'lucide-react';
 import './style.css';
 
-const API = 'http://localhost:8081/api';
+const RAW_API = import.meta.env.VITE_API_URL || 'http://localhost:8081';
+const API = RAW_API.endsWith('/api') ? RAW_API : `${RAW_API.replace(/\/$/, '')}/api`;
 function App() {
   const [projects, setProjects] = useState([]);
   const [tab, setTab] = useState('browse');
